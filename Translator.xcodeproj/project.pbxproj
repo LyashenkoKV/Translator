@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		2443C9E82AAA3D4400B34FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443C9E72AAA3D4400B34FEB /* AppDelegate.swift */; };
 		2443C9EA2AAA3D4400B34FEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443C9E92AAA3D4400B34FEB /* SceneDelegate.swift */; };
-		2443C9EC2AAA3D4400B34FEB /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443C9EB2AAA3D4400B34FEB /* TranslateViewController.swift */; };
+		2443C9EC2AAA3D4400B34FEB /* TranslatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443C9EB2AAA3D4400B34FEB /* TranslatorViewController.swift */; };
 		2443C9EF2AAA3D4400B34FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2443C9ED2AAA3D4400B34FEB /* Main.storyboard */; };
 		2443C9F12AAA3D4500B34FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2443C9F02AAA3D4500B34FEB /* Assets.xcassets */; };
 		2443C9F42AAA3D4500B34FEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2443C9F22AAA3D4500B34FEB /* LaunchScreen.storyboard */; };
-		2443C9FF2AAA4E5400B34FEB /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443C9FE2AAA4E5400B34FEB /* LanguageViewController.swift */; };
+		2443C9FF2AAA4E5400B34FEB /* SelectLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443C9FE2AAA4E5400B34FEB /* SelectLanguageViewController.swift */; };
+		2443CA012AAB0BF000B34FEB /* TranslatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443CA002AAB0BF000B34FEB /* TranslatorManager.swift */; };
+		2443CA032AAB0C0500B34FEB /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443CA022AAB0C0500B34FEB /* LanguageManager.swift */; };
+		2443CA052AAB1A0C00B34FEB /* TranslatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443CA042AAB1A0C00B34FEB /* TranslatorModel.swift */; };
+		2443CA072AAB1A3500B34FEB /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443CA062AAB1A3500B34FEB /* LanguageModel.swift */; };
+		2443CA092AAB1B3500B34FEB /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2443CA082AAB1B3500B34FEB /* ApiKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2443C9E42AAA3D4400B34FEB /* Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2443C9E72AAA3D4400B34FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2443C9E92AAA3D4400B34FEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2443C9EB2AAA3D4400B34FEB /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		2443C9EB2AAA3D4400B34FEB /* TranslatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorViewController.swift; sourceTree = "<group>"; };
 		2443C9EE2AAA3D4400B34FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2443C9F02AAA3D4500B34FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2443C9F32AAA3D4500B34FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2443C9F52AAA3D4500B34FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2443C9FE2AAA4E5400B34FEB /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		2443C9FE2AAA4E5400B34FEB /* SelectLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewController.swift; sourceTree = "<group>"; };
+		2443CA002AAB0BF000B34FEB /* TranslatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorManager.swift; sourceTree = "<group>"; };
+		2443CA022AAB0C0500B34FEB /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		2443CA042AAB1A0C00B34FEB /* TranslatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorModel.swift; sourceTree = "<group>"; };
+		2443CA062AAB1A3500B34FEB /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
+		2443CA082AAB1B3500B34FEB /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,7 @@
 				2443C9F02AAA3D4500B34FEB /* Assets.xcassets */,
 				2443C9F22AAA3D4500B34FEB /* LaunchScreen.storyboard */,
 				2443C9F52AAA3D4500B34FEB /* Info.plist */,
+				2443CA082AAB1B3500B34FEB /* ApiKeys.plist */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -73,6 +84,10 @@
 		2443C9FB2AAA4D9600B34FEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2443CA002AAB0BF000B34FEB /* TranslatorManager.swift */,
+				2443CA022AAB0C0500B34FEB /* LanguageManager.swift */,
+				2443CA042AAB1A0C00B34FEB /* TranslatorModel.swift */,
+				2443CA062AAB1A3500B34FEB /* LanguageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,8 +103,8 @@
 		2443C9FD2AAA4DAB00B34FEB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2443C9EB2AAA3D4400B34FEB /* TranslateViewController.swift */,
-				2443C9FE2AAA4E5400B34FEB /* LanguageViewController.swift */,
+				2443C9EB2AAA3D4400B34FEB /* TranslatorViewController.swift */,
+				2443C9FE2AAA4E5400B34FEB /* SelectLanguageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2443C9F42AAA3D4500B34FEB /* LaunchScreen.storyboard in Resources */,
+				2443CA092AAB1B3500B34FEB /* ApiKeys.plist in Resources */,
 				2443C9F12AAA3D4500B34FEB /* Assets.xcassets in Resources */,
 				2443C9EF2AAA3D4400B34FEB /* Main.storyboard in Resources */,
 			);
@@ -165,10 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2443C9EC2AAA3D4400B34FEB /* TranslateViewController.swift in Sources */,
+				2443CA012AAB0BF000B34FEB /* TranslatorManager.swift in Sources */,
+				2443C9EC2AAA3D4400B34FEB /* TranslatorViewController.swift in Sources */,
 				2443C9E82AAA3D4400B34FEB /* AppDelegate.swift in Sources */,
-				2443C9FF2AAA4E5400B34FEB /* LanguageViewController.swift in Sources */,
+				2443CA072AAB1A3500B34FEB /* LanguageModel.swift in Sources */,
+				2443CA032AAB0C0500B34FEB /* LanguageManager.swift in Sources */,
+				2443C9FF2AAA4E5400B34FEB /* SelectLanguageViewController.swift in Sources */,
 				2443C9EA2AAA3D4400B34FEB /* SceneDelegate.swift in Sources */,
+				2443CA052AAB1A0C00B34FEB /* TranslatorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

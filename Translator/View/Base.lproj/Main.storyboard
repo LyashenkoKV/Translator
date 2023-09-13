@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Translate View Controller-->
+        <!--Translator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TranslateViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TranslatorViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,11 +25,15 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8K-Wg-KoX">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="40"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="105" id="3hM-v3-LnN"/>
                                                     <constraint firstAttribute="height" constant="40" id="Lee-Wj-1YN"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Select"/>
+                                                <connections>
+                                                    <action selector="sourceLanguageButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYf-jU-aat"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXp-t1-8n6">
                                                 <rect key="frame" x="105" y="0.0" width="73" height="40"/>
@@ -39,15 +43,22 @@
                                                 <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrow.left.arrow.right" catalog="system"/>
+                                                <connections>
+                                                    <action selector="swapButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfY-jJ-YMb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSc-tp-I6Q">
                                                 <rect key="frame" x="178" y="0.0" width="105" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="nCd-jR-Eqo"/>
+                                                    <constraint firstAttribute="width" constant="105" id="qZy-LY-Phn"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Select"/>
+                                                <connections>
+                                                    <action selector="targetLanguageButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsg-PL-RBh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -55,7 +66,7 @@
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-0U-f31">
-                                        <rect key="frame" x="0.0" y="40" width="383" height="335.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="40" width="383" height="315.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -68,7 +79,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="naH-1v-75v">
-                                        <rect key="frame" x="5" y="375.66666666666669" width="373" height="4"/>
+                                        <rect key="frame" x="5" y="355.66666666666669" width="373" height="4"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -76,7 +87,7 @@
                                         </constraints>
                                     </progressView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oqG-je-wSt">
-                                        <rect key="frame" x="0.0" y="379.66666666666674" width="383" height="335.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="359.66666666666674" width="383" height="315.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -88,13 +99,27 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuh-b9-ayA">
+                                        <rect key="frame" x="0.0" y="675" width="383" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IoX-Vl-WUM"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Translate"/>
+                                        <connections>
+                                            <action selector="translateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hl8-jU-4vw"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Zuh-b9-ayA" firstAttribute="leading" secondItem="8xJ-rC-EnD" secondAttribute="leading" id="Ewr-L8-ce6"/>
                                     <constraint firstItem="s1i-0U-f31" firstAttribute="leading" secondItem="8xJ-rC-EnD" secondAttribute="leading" id="P8t-LC-23u"/>
                                     <constraint firstItem="oqG-je-wSt" firstAttribute="leading" secondItem="8xJ-rC-EnD" secondAttribute="leading" id="PbN-8l-HYB"/>
                                     <constraint firstAttribute="trailing" secondItem="naH-1v-75v" secondAttribute="trailing" constant="5" id="RR0-Zy-Eaj"/>
                                     <constraint firstAttribute="trailing" secondItem="bJ4-ze-xl8" secondAttribute="trailing" constant="50" id="TBJ-ad-vZi"/>
                                     <constraint firstItem="naH-1v-75v" firstAttribute="leading" secondItem="8xJ-rC-EnD" secondAttribute="leading" constant="5" id="cL0-WO-lXi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zuh-b9-ayA" secondAttribute="trailing" id="me3-Xr-ugZ"/>
                                     <constraint firstAttribute="trailing" secondItem="oqG-je-wSt" secondAttribute="trailing" id="ncx-hW-rIi"/>
                                     <constraint firstItem="oqG-je-wSt" firstAttribute="height" secondItem="s1i-0U-f31" secondAttribute="height" id="pr2-Ff-Uhe"/>
                                     <constraint firstItem="bJ4-ze-xl8" firstAttribute="leading" secondItem="8xJ-rC-EnD" secondAttribute="leading" constant="50" id="qtr-4s-fiu"/>
@@ -112,15 +137,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dLT-NU-jW8"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="s1i-0U-f31" id="fgv-cF-GZj"/>
+                        <outlet property="outputTextView" destination="oqG-je-wSt" id="2bC-RM-cGU"/>
+                        <outlet property="progressView" destination="naH-1v-75v" id="xIM-Bp-unv"/>
+                        <outlet property="sourceLanguageButton" destination="J8K-Wg-KoX" id="1Et-Aa-UB8"/>
+                        <outlet property="targetLanguageButton" destination="iSc-tp-I6Q" id="8S3-vw-HiV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
         </scene>
-        <!--Language View Controller-->
+        <!--Select Language View Controller-->
         <scene sceneID="Ro8-ui-Pap">
             <objects>
-                <viewController id="5Po-E2-JK7" customClass="LanguageViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectLanguageViewControllerIdentifier" id="5Po-E2-JK7" customClass="SelectLanguageViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gih-Yz-zu2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +171,10 @@
                                         </constraints>
                                         <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Select"/>
+                                        <connections>
+                                            <action selector="selectButtonAction:" destination="5Po-E2-JK7" eventType="touchUpInside" id="HHb-AC-w0L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -159,6 +194,9 @@
                             <constraint firstItem="ul1-c6-Kgy" firstAttribute="bottom" secondItem="HJ3-eH-nZi" secondAttribute="bottom" id="uTH-Js-KQO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="UpU-3o-xr4" id="9Q9-Jb-eWH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MW5-Nz-xAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
