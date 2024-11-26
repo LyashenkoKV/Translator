@@ -8,9 +8,11 @@
 import Foundation
 
 struct LanguageModel {
+
     struct Languages {
         var code: String?
         var name: String?
     }
+    
     var languages: [Languages]?
 }

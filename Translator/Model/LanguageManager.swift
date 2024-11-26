@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol GetLanguageProtocol {
+protocol GetLanguageProtocol: AnyObject {
     func getLanguage(response: [LanguageModel.Languages])
 }
 
 struct LanguageManager {
     
-    var delegate: GetLanguageProtocol?
-    
+    weak var delegate: GetLanguageProtocol?
+
     func getRequest() {
         var headers: [String: String]?
         let urlString = "https://text-translator2.p.rapidapi.com/getLanguages"
@@ -50,6 +50,7 @@ struct LanguageManager {
         }
         dataTask.resume()
     }
+    
     private func parseJSON(_ data: Data) -> LanguageModel? {
         do {
             if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],

@@ -7,15 +7,15 @@
 
 import Foundation
 
-protocol TranslaterManagerDelegate {
+protocol TranslaterManagerDelegate: AnyObject {
     func didUpdateText(_ languageModel: TranslatorModel)
     func translationProgressUpdated(_ progress: Float)
 }
 
 struct TranslatorManager {
     
-    var delegate: TranslaterManagerDelegate?
-    
+    weak var delegate: TranslaterManagerDelegate?
+
     func postRequest(source: String, target: String, text: String) {
         var headers: [String: String]?
         let urlString = "https://text-translator2.p.rapidapi.com/translate"

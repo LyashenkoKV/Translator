@@ -45,31 +45,32 @@ class SelectLanguageViewController: UIViewController {
 }
 
 extension SelectLanguageViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if tag == 0 {
-            return sourceLanguages.count
-        } else {
-            return targetLanguages.count
-        }
+        return tag == 0 ? sourceLanguages.count : targetLanguages.count
     }
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if tag == 0 {
-            return sourceLanguages[row]
-        } else {
-            return targetLanguages[row]
-        }
+        let languages = tag == 0 ? sourceLanguages : targetLanguages
+        return row < languages.count ? languages[row] : nil
     }
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let languages = tag == 0 ? sourceLanguages : targetLanguages
+        guard row < languages.count else { return }
+
         if tag == 0 {
-            delegate?.didSelectSource(language: sourceLanguages[row])
+            delegate?.didSelectSource(language: languages[row])
         } else {
-            delegate?.didSelectTarget(language: targetLanguages[row])
+            delegate?.didSelectTarget(language: languages[row])
         }
     }
 }
+
 extension SelectLanguageViewController: GetLanguageProtocol {
     func getLanguage(response: [LanguageModel.Languages]) {
         sourceLanguages.removeAll()
